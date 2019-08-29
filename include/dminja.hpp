@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-#include <json.hpp>
+#include <dmjson.hpp>
 
 // #include "environment.hpp"
 #ifndef PANTOR_INJA_ENVIRONMENT_HPP
@@ -20,7 +20,7 @@
 #include <sstream>
 #include <string>
 
-#include <json.hpp>
+#include <dmjson.hpp>
 
 // #include "config.hpp"
 #ifndef PANTOR_INJA_CONFIG_HPP
@@ -1405,7 +1405,7 @@ struct ParserConfig {
 
 #include <utility>
 
-#include <json.hpp>
+#include <dmjson.hpp>
 
 // #include "string_view.hpp"
 
@@ -2011,7 +2011,7 @@ using TemplateStorage = std::map<std::string, Template>;
 // #include "utils.hpp"
 
 
-#include <json.hpp>
+#include <dmjson.hpp>
 
 
 namespace inja {
@@ -2609,7 +2609,7 @@ namespace stdinja = std;
 #include <algorithm>
 #include <numeric>
 
-#include <json.hpp>
+#include <dmjson.hpp>
 
 // #include "bytecode.hpp"
 

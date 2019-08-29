@@ -15,11 +15,10 @@ SET(DMINJA_VERSION "${DMINJA_VERSION_MAJOR}.${DMINJA_VERSION_MINOR}.${DMINJA_VER
 MESSAGE(STATUS "VERSION: ${DMINJA_VERSION}")
 
 OPTION(USE_DMINJA "use dminja" OFF)
-CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/include/dminja_config.h.in ${CMAKE_CURRENT_SOURCE_DIR}/include/dminja_config.h)
+ADD_DEFINITIONS(-DCATCH_CONFIG_MAIN)
 
-ModuleImport("dmlog" "thirdparty/dmlog")
-LibImport("dminja" "src/dminja_module")
-ExeImport("test" "dminja;dmlog")
+
+ExeImport("test" "")
 
 #ADD_CUSTOM_COMMAND(
 #TARGET dminjatest
