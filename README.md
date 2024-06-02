@@ -26,6 +26,5 @@ dminja
 ```cpp
 ```
 ## Contacts
-[![Join the chat](https://badges.gitter.im/brinkqiang/dminja/Lobby.svg)](https://gitter.im/brinkqiang/dminja)
 
 ## Thanks
