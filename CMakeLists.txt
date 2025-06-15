@@ -9,4 +9,8 @@ ModuleSetCompileOptions()
 
 ADD_DEFINITIONS(-DCATCH_CONFIG_MAIN)
 
-ExeImport("test" "")
+
+InterfaceImport("dminja" "include" "")
+if(PROJECT_IS_TOP_LEVEL)
+    ExeImport("test" "dminja")
+endif()
