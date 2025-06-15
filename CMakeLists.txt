@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.21)
 
 PROJECT(dminja)
 
@@ -7,32 +7,6 @@ INCLUDE(cmake/ModuleImport.cmake)
 INCLUDE(cmake/ModuleCompileOptions.cmake)
 ModuleSetCompileOptions()
 
-SET(DMINJA_VERSION_MAJOR "1")
-SET(DMINJA_VERSION_MINOR "0")
-SET(DMINJA_VERSION_PATCH "1")
-SET(DMINJA_VERSION "${DMINJA_VERSION_MAJOR}.${DMINJA_VERSION_MINOR}.${DMINJA_VERSION_PATCH}")
-
-MESSAGE(STATUS "VERSION: ${DMINJA_VERSION}")
-
-OPTION(USE_DMINJA "use dminja" OFF)
 ADD_DEFINITIONS(-DCATCH_CONFIG_MAIN)
 
-
 ExeImport("test" "")
-
-#ADD_CUSTOM_COMMAND(
-#TARGET dminjatest
-#PRE_BUILD
-#COMMAND ${CMAKE_COMMAND} -E copy_if_different
-#${CMAKE_CURRENT_SOURCE_DIR}/config/test.csv
-#$<TARGET_FILE_DIR:dminjatest>
-#)
-
-#INSTALL(DIRECTORY include/ DESTINATION include)
-#INSTALL(TARGETS dminja
-#        RUNTIME DESTINATION bin
-#        LIBRARY DESTINATION lib
-#        ARCHIVE DESTINATION lib)
-
-#SET(DMINJA_LIBS "dminja")
-#MARK_AS_ADVANCED(${DMINJA_LIBS})
